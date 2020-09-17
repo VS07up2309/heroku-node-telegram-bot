@@ -13,6 +13,13 @@ else {
 
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
+bot.onText(/\/start/, (msg) => {
+
+bot.sendMessage(msg.chat.id, "Welcome");
+    
+}
+
+
 bot.on('message', (msg) => {
   const name = msg.from.first_name;
   bot.sendMessage(msg.chat.id, 'Hello, ' + name + '!').then(() => {
