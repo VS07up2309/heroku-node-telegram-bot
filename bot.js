@@ -19,7 +19,7 @@ bot.sendMessage(msg.chat.id, "Welcome", {
 "reply_markup": {
     "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
     }
-}
+});
 
 });
 
