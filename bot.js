@@ -14,7 +14,13 @@ else {
 console.log('Bot server started in the ' + process.env.NODE_ENV + ' mode');
 
 bot.onText(/\/start/, (msg) => {
-bot.sendMessage(msg.chat.id, "Welcome");  
+
+bot.sendMessage(msg.chat.id, "Welcome", {
+"reply_markup": {
+    "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
+    }
+});
+
 });
 
 bot.on('message', (msg) => {   
