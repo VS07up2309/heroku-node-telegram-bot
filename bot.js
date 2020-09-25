@@ -17,6 +17,13 @@ bot.onText(/\/start/, (msg) => {
 bot.sendMessage(msg.chat.id, "Welcome");  
 });
 
+bot.on('message', (msg) => {   
+var Hi = "hi";
+if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+bot.sendMessage(msg.chat.id,"Hello dear user");
+}   
+});
+
 
 
 module.exports = bot;
